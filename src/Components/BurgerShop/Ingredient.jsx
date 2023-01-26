@@ -6,7 +6,7 @@ const Ingredient = (props) => {
 
 			{props.isList
 			? <button onClick={() => props.addToBurger(props.ingredient)}>+</button>
-			: <button>-</button>
+			: <button onClick={() => props.removeFromBurger(props.idx)}>-</button>
 			}
 		</li>
 	)
