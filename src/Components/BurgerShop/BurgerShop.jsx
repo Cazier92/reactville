@@ -1,9 +1,13 @@
+import { useState } from 'react'
 import '../../styles/burger.css'
 
 import { ingredients } from '../../data/burger-data'
+import IngredientList from './IngredientList'
+import BurgerStack from './BurgerStack'
 
 const BurgerShop = () => {
   console.log(ingredients)
+  const [stack, setStack] = useState([])
   
   return (
     <div className="burger-shop">
