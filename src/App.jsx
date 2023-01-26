@@ -6,6 +6,7 @@ import Nav from './Components/Nav/Nav'
 
 // Components
 import Landing from './Components/Landing/Landing'
+import BurgerShop from './Components/BurgerShop/BurgerShop'
 
 const App = () => {
   return (
@@ -14,7 +15,7 @@ const App = () => {
     <main>
       <Routes>
         <Route path='/' element={<Landing />}/>
-        <Route path='/burgers' />
+        <Route path='/burgers' element={<BurgerShop />}/>
       </Routes>
     </main>
     </>

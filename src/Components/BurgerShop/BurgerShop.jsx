@@ -9,6 +9,10 @@ const BurgerShop = () => {
   console.log(ingredients)
   const [stack, setStack] = useState([])
   
+  const addToBurger = (ingredient) => {
+    setStack([...stack, ingredient])
+  }
+
   return (
     <div className="burger-shop">
       <nav>
@@ -16,8 +20,8 @@ const BurgerShop = () => {
         <button>Clear Order</button>
       </nav>
       <section>
-        IngredientList component here
-        BurgerStack component here
+        <IngredientList ingredients={ingredients} addToBurger={addToBurger}/>
+        <BurgerStack stack={stack} />
       </section>
     </div>
   )
