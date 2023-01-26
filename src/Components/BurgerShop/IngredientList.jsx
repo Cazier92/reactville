@@ -4,7 +4,7 @@ const IngredientList = (props) => {
 	return (
 		<ul>
 			{props.ingredients.map((ingredient) =>
-				<li><Ingredient ingredient={ingredient} isList={true} addToBurger={props.addToBurger}/></li>
+				<Ingredient ingredient={ingredient} isList={true} addToBurger={props.addToBurger}/>
 			)}
 		</ul>
 	)
