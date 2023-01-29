@@ -19,9 +19,16 @@ const BurgerShop = () => {
     }
   }
 
-  const removeFromBurger = (idx) => {
-    setStack(stack.filter((ingredient, i) => i !== idx))
+  const removeFromBurger = (idx, ingredient) => {
+    if (ingredient.type === 'bun') {
+      setStack(stack.filter((ing) => ing !== ingredient))
+    } else {
+      setStack(stack.filter((ing, i) => i !== idx))
+    }
   }
+  // const removeFromBurger = (idx) => {
+  //   setStack(stack.filter((ing, i) => i !== idx))
+  // }
 
   const clearOrder = () => {
     setStack([])

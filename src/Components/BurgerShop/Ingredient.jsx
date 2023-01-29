@@ -9,7 +9,7 @@ const Ingredient = (props) => {
 			disabled={props.disabled} 
 			onClick={() => props.addToBurger(props.ingredient)}
 			>+</button>
-			: <button onClick={() => props.removeFromBurger(props.idx)}>-</button>
+			: <button onClick={() => props.removeFromBurger(props.idx, props.ingredient)}>-</button>
 			}
 		</li>
 	)
