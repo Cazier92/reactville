@@ -10,7 +10,13 @@ const BurgerShop = () => {
   const [stack, setStack] = useState([])
 
   const addToBurger = (ingredient) => {
-    setStack([...stack, ingredient])
+    if (ingredient.type === 'bun') {
+      setStack([ingredient, ...stack, ingredient])
+      console.log(stack)
+    } else {
+      setStack([...stack, ingredient])
+      console.log(stack)
+    }
   }
 
   const removeFromBurger = (idx) => {

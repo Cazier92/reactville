@@ -5,7 +5,10 @@ const Ingredient = (props) => {
 			{props.ingredient.name}
 
 			{props.isList
-			? <button disabled={props.disabled} onClick={() => props.addToBurger(props.ingredient)}>+</button>
+			? <button 
+			disabled={props.disabled} 
+			onClick={() => props.addToBurger(props.ingredient)}
+			>+</button>
 			: <button onClick={() => props.removeFromBurger(props.idx)}>-</button>
 			}
 		</li>
