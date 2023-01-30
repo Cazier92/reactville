@@ -19,7 +19,7 @@ const Cart = (props) => {
       </div>
 
       <button>CHECKOUT</button>
-      <button>CLEAR CART</button>
+      <button onClick={() => props.clearCart()}>CLEAR CART</button>
     </div>
   )
 }
