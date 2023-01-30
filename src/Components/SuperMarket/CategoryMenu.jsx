@@ -1,12 +1,14 @@
 
 
 const CategoryMenu = ({products}) => {
-  const categories = products.map((product) => product.category)
+  const categories = [...new Set(products.map((product) => product.category))]
   return (
     <select>
-        {categories.map(category => 
-          <option value={category}>{category}</option>
-          )}
+        {categories.map((category, idx) => (
+          <option key={idx}>
+            {category}
+          </option>
+        ))}
     </select>
   )
 }
