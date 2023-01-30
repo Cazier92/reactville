@@ -9,13 +9,13 @@ const BurgerShop = () => {
   console.log(ingredients)
   const [stack, setStack] = useState([])
 
-  const addToBurger = (ingredient) => {
+  const addToBurger = (ingredient, idx) => {
     if (ingredient.type === 'bun') {
       setStack([ingredient, ...stack, ingredient])
-      console.log(stack)
+    } else if (stack[0]){
+      setStack([...stack.slice(0, 1), ingredient, ...stack.slice(1)])
     } else {
       setStack([...stack, ingredient])
-      console.log(stack)
     }
   }
 
