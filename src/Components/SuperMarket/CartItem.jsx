@@ -8,7 +8,7 @@ const CartItem = (props) => {
 				<p id="product-price">${props.item.price}</p>
 				<p id="product-quantity">Quantity:{props.item.quantity}</p>
 			</span>
-			<button>X</button>
+			<button onClick={() => props.removeFromCart(props.item)}>X</button>
 		</div>
 	)
 }

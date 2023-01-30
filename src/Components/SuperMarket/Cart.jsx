@@ -9,6 +9,7 @@ const Cart = (props) => {
         <CartItem 
           key={idx}
           item={item}
+          removeFromCart={props.removeFromCart}
         />
       ))}
 
